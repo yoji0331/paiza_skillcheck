@@ -7,7 +7,7 @@ process.stdin.on('data', function(chunk) {
 });
 
 process.stdin.on('end', function() {
-  var score = Number(input_string);
+  var line = Number(input_string);
 
-  console.log(7-score);
+  console.log(line * line * 6);
 });
