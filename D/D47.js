@@ -7,7 +7,8 @@ process.stdin.on('data', function(chunk) {
 });
 
 process.stdin.on('end', function() {
-  var last_value = Number(input_string);
-
-  console.log(100-last_value);
+  var countries = input_string.split('\n');
+  console.log("Gold " + countries[0]);
+  console.log("Silver " + countries[1]);
+  console.log("Bronze " + countries[2]);
 });
