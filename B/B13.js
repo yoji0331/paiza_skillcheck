@@ -23,12 +23,11 @@ process.stdin.on('end', function() {
     var temp=lines[i+2];
     var hoge=temp.split(' ');
     jikoku[i] = {hh: Number(hoge[0]),mm:Number(hoge[1])};
-    console.log(jikoku[i]);
     var eki = jikoku[i].hh * 60 + jikoku[i].mm;
-    console.log(eki);
     minutes = eki;
-    minutes += b;
-    minutes += c;
+    minutes = minutes + b;
+    minutes = minutes + c;
+
     if(minutes < 540){
       ok = eki - a;
     } else {
@@ -36,9 +35,9 @@ process.stdin.on('end', function() {
     }
 
   }
-  if(minutes % 60 == 0){
-    console.log("0"+Math.floor(minutes/60) + ":0" + minutes % 60);
+  if(ok % 60 == 0){
+    console.log("0"+Math.floor(ok/60) + ":0" + ok % 60);
   } else{
-    console.log("0"+Math.floor(minutes/60) + ":" + minutes % 60);
+    console.log("0"+Math.floor(ok/60) + ":" + ok % 60);
   }    
 });
