@@ -7,6 +7,6 @@ process.stdin.on('data', function(chunk) {
 });
 
 process.stdin.on('end', function() {
-	var lines=input_string.split(' ');
-	console.log(lines[0].substr(0,1) + "." + lines[1].substr(0,1));
+	var lines=input_string.split('\n');
+	console.log(lines[0].substr(0,Number(lines[1])));
 });
